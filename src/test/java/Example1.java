@@ -21,6 +21,7 @@ public class Example1 {
                 Map<String, ?> platform = iterator.next();
                 System.out.println(platform.get("id"));
                 System.out.println(platform.get("name"));
+                System.out.println(platform.get("fname"));
             }
 
 
