@@ -14,13 +14,14 @@ public class Example1 {
         JSONParser parser = new JSONParser();
 
         try {
-            Object obj = parser.parse(new FileReader("example1.json"));
-
-            JSONObject jsonObject =  (JSONObject) obj;
-
-           //write code here to parse the json
-
-            //print all the platforms
+            JSONObject obj = (JSONObject) parser.parse(new FileReader("example1.json"));
+            System.out.println(obj.get("id"));
+            List<Map<String,?>> platforms = (List<Map<String, ?>>) obj.get("platforms");
+            for (Iterator<Map<String, ?>> iterator = platforms.iterator(); iterator.hasNext(); ) {
+                Map<String, ?> platform = iterator.next();
+                System.out.println(platform.get("id"));
+                System.out.println(platform.get("name"));
+            }
 
 
         } catch (FileNotFoundException e) {
