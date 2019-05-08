@@ -22,7 +22,10 @@ public class Example2 {
                 Map<String,?> element = (Map<String, ?>) iterator.next();
                 System.out.println(element.get("name"));
                 System.out.println(element.get("cars"));
+
                 System.out.println(element.get("job"));
+
+                System.out.println(element.get("cars"));
 
             }
 
