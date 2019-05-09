@@ -27,6 +27,7 @@ public class Example3 {
             for (Iterator<Map<String, ?>> iterator = entries.iterator(); iterator.hasNext(); ) {
                 Map<String, ?> entry = iterator.next();
                 System.out.println(entry.get("title"));
+                System.out.println(entry.get("author"));
             }
 
 
